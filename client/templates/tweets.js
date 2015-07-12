@@ -3,6 +3,6 @@ Template.tweets.helpers({
     return Users.find({id: userId});
   },
   tweets: function () {
-    return Tweets.find({});
+    return Tweets.find({}, {sort: {createdAt: -1}});
   } 
 });

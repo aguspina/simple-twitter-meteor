@@ -1,7 +1,3 @@
 Meteor.publish('tweets', function() {
-  if (Meteor.userId()) {
-    return Tweets.find();
-  } else {
-    this.ready();
-  }
+  return Tweets.find({}, {sort: {createdAt: -1}});
 });

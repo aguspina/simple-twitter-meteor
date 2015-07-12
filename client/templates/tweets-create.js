@@ -1,16 +1,11 @@
 Template.tweetCreate.helpers({
   'submit .js-tweet-new': function(event) {
-    event.preventDefault();
-
-    var $input = $(event.target).find('[type=text]');
-    if (!$input.val())
+    var tweetText = event.target.text.value;
+    if (tweetText)
       return;
     
-    Tweets.insert({
-      text: $input.val(),
-      owner: Meteor.userId(),
-      createdAt: new Date()
-    });
-    $input.val('');
+    Meteor.call('addTweet',text);
+    event.target.text.value = "";
+    return false;
   }
 });
