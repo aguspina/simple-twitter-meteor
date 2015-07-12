@@ -1,11 +1,13 @@
-Template.tweetCreate.helpers({
-  'submit .js-tweet-new': function(event) {
-    var tweetText = event.target.text.value;
-    if (tweetText)
+Template.tweetCreate.events({
+  'click .js-tweet-add': function(event) {
+    debugger;
+    var tweetText = $(".js-tweet-new").find("input").val();
+    if (!tweetText)
       return;
     
-    Meteor.call('addTweet',text);
-    event.target.text.value = "";
+    Meteor.call('addTweet',tweetText);
+    $(".js-tweet-new").find("input").val("");
     return false;
   }
 });
+

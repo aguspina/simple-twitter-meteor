@@ -4,6 +4,7 @@ head
 body
   .container
     +loginButtons
-    +tweets
-    .text-center
-      +tweetCreate  
+    if currentUser
+      +tweets
+      .text-center
+        +tweetCreate  
