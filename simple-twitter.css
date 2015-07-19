@@ -1,7 +1,3 @@
-#tweet-text {
-  width: 100%;
-}
-
 .js-tweet-new {
   margin-bottom: 20px;
 }
@@ -9,6 +5,10 @@
 .user {
   color: #787878;
   font-size: 14px;
+}
+
+.page-header {
+  color: #55acee;
 }
 
 .content {
@@ -23,6 +23,7 @@
   background-color: white;
   border-radius: 5px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .login-controls {

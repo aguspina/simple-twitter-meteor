@@ -1,12 +1,12 @@
 Template.tweetCreate.events({
   'click .js-tweet-add': function (event) {
 
-    var tweetText = $(".js-tweet-new").find("input").val();
-    
-    if (!tweetText) return;
-    
+    var tweetText = $("#tweet-text").val();
+    if (tweetText.length == 0) return;
+
     Meteor.call('addTweet', tweetText);
-    $(".js-tweet-new").find("input").val("");
+    $("#tweet-text").val("");
+    
     return false;
   }
 });
