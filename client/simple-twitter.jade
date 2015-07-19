@@ -1,10 +1,10 @@
 head
-  title simple-twitter
+  title Twitter App
 
 body
   .container
-    +loginButtons
+    .login-controls
+      +loginButtons
     if currentUser
+      +tweetCreate  
       +tweets
-      .text-center
-        +tweetCreate  

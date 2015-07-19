@@ -1,8 +1,7 @@
 template(name="tweetCreate")
   if currentUser
-    form(class="js-tweet-new input-symbol")
-      div.row
-        div.col-md-6
-          input(type="text" placeholder="Escribe un tweet")
-        div.col-md-6
-          button.js-tweet-add.btn.btn-info Twittea!
+    form(class="js-tweet-new row form-group")
+      .col-xs-10
+        input(type="text" placeholder="What are you thinking?", class="form-control", id="tweet-text")
+      .col-xs-2
+        input(type="submit", value="Tweet now!", class="js-tweet-add btn btn-success")

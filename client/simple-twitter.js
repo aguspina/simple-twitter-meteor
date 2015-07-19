@@ -1,5 +1,5 @@
 Template.main_template.helpers({
-  currentUser: function() {
+  currentUser: function () {
     return Meteor.userId();
   }
 })

@@ -1,6 +1,8 @@
 template(name="tweets")
-  each tweets  
-    h4= username 
-    h5= text
-    hr
 
+  h2.page-header Tweets
+  
+  each tweets  
+    p.user= username 
+    p.content= text
+    hr
